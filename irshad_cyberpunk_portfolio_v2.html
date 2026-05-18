@@ -582,6 +582,10 @@
       if (typeof CONFIG !== 'undefined') {
           document.getElementById("web3forms-key").value = CONFIG.WEB3FORMS_KEY;
       }
+      else {
+        // Vercel handles injecting variables safely into your window object if configured
+        document.getElementById("web3forms-key").value = "%%WEB3FORMS_KEY%%";
+    }
   });
 
   // Open / close popup
